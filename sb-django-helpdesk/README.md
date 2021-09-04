@@ -1,6 +1,6 @@
-# sb-django-helpdesk
+# freelance_services
 
-SB django-helpdesk
+Freelance services
 
 This project was generated with [`wemake-django-template`](https://github.com/wemake-services/wemake-django-template). Current template version is: [77d1b0e5a2d560eb308b3c5d96e4a4f05fdd8b28](https://github.com/wemake-services/wemake-django-template/tree/77d1b0e5a2d560eb308b3c5d96e4a4f05fdd8b28). See what is [updated](https://github.com/wemake-services/wemake-django-template/compare/77d1b0e5a2d560eb308b3c5d96e4a4f05fdd8b28...master) since then.
 
