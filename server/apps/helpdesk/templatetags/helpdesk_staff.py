@@ -7,7 +7,7 @@ templatetags/helpdesk_staff.py
 import logging
 from django.template import Library
 
-from helpdesk.decorators import is_helpdesk_staff
+from server.apps.helpdesk.decorators import is_helpdesk_staff
 
 
 logger = logging.getLogger(__name__)

@@ -1,9 +1,9 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
-from helpdesk.models import Queue, Ticket, FollowUp, PreSetReply, KBCategory
-from helpdesk.models import EscalationExclusion, EmailTemplate, KBItem
-from helpdesk.models import TicketChange, KBIAttachment, FollowUpAttachment, IgnoreEmail
-from helpdesk.models import CustomField
+from server.apps.helpdesk.models import Queue, Ticket, FollowUp, PreSetReply, KBCategory
+from server.apps.helpdesk.models import EscalationExclusion, EmailTemplate, KBItem
+from server.apps.helpdesk.models import TicketChange, KBIAttachment, FollowUpAttachment, IgnoreEmail
+from server.apps.helpdesk.models import CustomField
 
 
 @admin.register(Queue)

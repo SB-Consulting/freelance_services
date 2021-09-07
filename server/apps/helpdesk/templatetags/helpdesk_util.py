@@ -4,7 +4,7 @@ from django.conf import settings
 
 from datetime import datetime
 
-from helpdesk.forms import CUSTOMFIELD_DATE_FORMAT, CUSTOMFIELD_TIME_FORMAT, CUSTOMFIELD_DATETIME_FORMAT
+from server.apps.helpdesk.forms import CUSTOMFIELD_DATE_FORMAT, CUSTOMFIELD_TIME_FORMAT, CUSTOMFIELD_DATETIME_FORMAT
 
 register = Library()
 

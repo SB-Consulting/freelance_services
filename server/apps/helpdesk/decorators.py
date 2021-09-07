@@ -7,7 +7,7 @@ from django.shortcuts import redirect
 from django.contrib.auth.decorators import user_passes_test
 
 
-from helpdesk import settings as helpdesk_settings
+from server.apps.helpdesk import settings as helpdesk_settings
 
 
 def check_staff_status(check_staff=False):
