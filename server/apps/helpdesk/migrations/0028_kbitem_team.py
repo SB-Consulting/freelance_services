@@ -3,7 +3,7 @@
 from django.db import migrations, models
 import django.db.models.deletion
 
-from helpdesk import settings as helpdesk_settings
+from server.apps.helpdesk import settings as helpdesk_settings
 
 
 class Migration(migrations.Migration):
