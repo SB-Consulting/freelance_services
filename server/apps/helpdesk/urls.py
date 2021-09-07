@@ -12,9 +12,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import views as auth_views
 from django.views.generic import TemplateView
 
-from helpdesk.decorators import helpdesk_staff_member_required, protect_view
-from helpdesk import settings as helpdesk_settings
-from helpdesk.views import feeds, staff, public, kb, login
+from server.apps.helpdesk.decorators import helpdesk_staff_member_required, protect_view
+from server.apps.helpdesk import settings as helpdesk_settings
+from server.apps.helpdesk.views import feeds, staff, public, kb, login
 try:
     # TODO: why is it imported? due to some side-effect or by mistake?
     import helpdesk.tasks  # NOQA

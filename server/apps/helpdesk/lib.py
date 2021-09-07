@@ -12,7 +12,7 @@ import mimetypes
 from django.conf import settings
 from django.utils.encoding import smart_text
 
-from helpdesk.models import FollowUpAttachment
+from server.apps.helpdesk.models import FollowUpAttachment
 
 
 logger = logging.getLogger('helpdesk')

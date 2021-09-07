@@ -23,13 +23,13 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import FormView
 
-from helpdesk import settings as helpdesk_settings
-from helpdesk.decorators import protect_view, is_helpdesk_staff
-import helpdesk.views.staff as staff
-import helpdesk.views.abstract_views as abstract_views
-from helpdesk.lib import text_is_spam
-from helpdesk.models import Ticket, Queue, UserSettings
-from helpdesk.user import huser_from_request
+from server.apps.helpdesk import settings as helpdesk_settings
+from server.apps.helpdesk.decorators import protect_view, is_helpdesk_staff
+import server.apps.helpdesk.views.staff as staff
+import server.apps.helpdesk.views.abstract_views as abstract_views
+from server.apps.helpdesk.lib import text_is_spam
+from server.apps.helpdesk.models import Ticket, Queue, UserSettings
+from server.apps.helpdesk.user import huser_from_request
 
 logger = logging.getLogger(__name__)
 

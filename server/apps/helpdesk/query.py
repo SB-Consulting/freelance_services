@@ -9,7 +9,7 @@ import json
 
 from model_utils import Choices
 
-from helpdesk.serializers import DatatablesTicketSerializer
+from server.apps.helpdesk.serializers import DatatablesTicketSerializer
 
 
 def query_to_base64(query):

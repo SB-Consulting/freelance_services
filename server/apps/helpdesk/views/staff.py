@@ -24,36 +24,36 @@ from django.utils.html import escape
 from django.utils import timezone
 from django.views.generic.edit import FormView, UpdateView
 
-from helpdesk.forms import CUSTOMFIELD_DATE_FORMAT
-from helpdesk.query import (
+from server.apps.helpdesk.forms import CUSTOMFIELD_DATE_FORMAT
+from server.apps.helpdesk.query import (
     get_query_class,
     query_to_base64,
     query_from_base64,
 )
 
-from helpdesk.user import HelpdeskUser
+from server.apps.helpdesk.user import HelpdeskUser
 
-from helpdesk.decorators import (
+from server.apps.helpdesk.decorators import (
     helpdesk_staff_member_required, helpdesk_superuser_required,
     is_helpdesk_staff
 )
-from helpdesk.forms import (
+from server.apps.helpdesk.forms import (
     TicketForm, UserSettingsForm, EmailIgnoreForm, EditTicketForm, TicketCCForm,
     TicketCCEmailForm, TicketCCUserForm, EditFollowUpForm, TicketDependencyForm, MultipleTicketSelectForm
 )
-from helpdesk.decorators import superuser_required
-from helpdesk.lib import (
+from server.apps.helpdesk.decorators import superuser_required
+from server.apps.helpdesk.lib import (
     safe_template_context,
     process_attachments,
     queue_template_context,
 )
-from helpdesk.models import (
+from server.apps.helpdesk.models import (
     Ticket, Queue, FollowUp, TicketChange, PreSetReply, FollowUpAttachment, SavedSearch,
     IgnoreEmail, TicketCC, TicketDependency, UserSettings, KBItem, CustomField, TicketCustomFieldValue,
 )
-from helpdesk import settings as helpdesk_settings
-import helpdesk.views.abstract_views as abstract_views
-from helpdesk.views.permissions import MustBeStaffMixin
+from server.apps.helpdesk import settings as helpdesk_settings
+import server.apps.helpdesk.views.abstract_views as abstract_views
+from server.apps.helpdesk.views.permissions import MustBeStaffMixin
 from ..lib import format_time_spent
 
 from rest_framework import status

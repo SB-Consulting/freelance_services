@@ -1,4 +1,4 @@
-from helpdesk.models import CustomField, KBItem, Queue
+from server.apps.helpdesk.models import CustomField, KBItem, Queue
 
 
 class AbstractCreateTicketMixin():

@@ -1,11 +1,11 @@
-from helpdesk.models import (
+from server.apps.helpdesk.models import (
     Ticket,
     Queue,
     KBCategory,
     KBItem,
 )
 
-from helpdesk import settings as helpdesk_settings
+from server.apps.helpdesk import settings as helpdesk_settings
 
 
 def huser_from_request(req):

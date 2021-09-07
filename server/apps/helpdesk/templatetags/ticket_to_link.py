@@ -14,7 +14,7 @@ from django import template
 from django.urls import reverse
 from django.utils.safestring import mark_safe
 
-from helpdesk.models import Ticket
+from server.apps.helpdesk.models import Ticket
 
 import re
 

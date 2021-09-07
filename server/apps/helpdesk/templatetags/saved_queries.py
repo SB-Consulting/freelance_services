@@ -8,7 +8,7 @@ templatetags/saved_queries.py - This template tag returns previously saved
 from django import template
 from django.db.models import Q
 
-from helpdesk.models import SavedSearch
+from server.apps.helpdesk.models import SavedSearch
 
 
 register = template.Library()

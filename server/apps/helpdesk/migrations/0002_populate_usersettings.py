@@ -2,7 +2,7 @@
 from django.contrib.auth import get_user_model
 from django.db import models, migrations
 
-from helpdesk.settings import DEFAULT_USER_SETTINGS
+from server.apps.helpdesk.settings import DEFAULT_USER_SETTINGS
 
 
 def pickle_settings(data):

@@ -3,7 +3,7 @@ from django.db import models, migrations
 import django.utils.timezone
 from django.conf import settings
 
-import helpdesk.models
+import server.apps.helpdesk.models
 
 
 class Migration(migrations.Migration):

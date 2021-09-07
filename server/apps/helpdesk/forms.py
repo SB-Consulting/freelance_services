@@ -16,10 +16,10 @@ from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth import get_user_model
 from django.utils import timezone
 
-from helpdesk.lib import safe_template_context, process_attachments
-from helpdesk.models import (Ticket, Queue, FollowUp, IgnoreEmail, TicketCC,
+from server.apps.helpdesk.lib import safe_template_context, process_attachments
+from server.apps.helpdesk.models import (Ticket, Queue, FollowUp, IgnoreEmail, TicketCC,
                              CustomField, TicketCustomFieldValue, TicketDependency, UserSettings, KBItem)
-from helpdesk import settings as helpdesk_settings
+from server.apps.helpdesk import settings as helpdesk_settings
 
 logger = logging.getLogger(__name__)
 User = get_user_model()

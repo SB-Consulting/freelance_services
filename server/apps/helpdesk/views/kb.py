@@ -12,9 +12,9 @@ from django.http import HttpResponseRedirect, Http404
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.clickjacking import xframe_options_exempt
 
-from helpdesk import settings as helpdesk_settings
-from helpdesk import user
-from helpdesk.models import KBCategory, KBItem
+from server.apps.helpdesk import settings as helpdesk_settings
+from server.apps.helpdesk import user
+from server.apps.helpdesk.models import KBCategory, KBItem
 
 
 def index(request):
