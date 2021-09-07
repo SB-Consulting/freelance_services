@@ -16,10 +16,14 @@ from django.urls import include, path
 from django.views.generic import TemplateView
 from health_check import urls as health_urls
 
+from server.apps.helpdesk import urls as helpdesk_urls
+
 admin.autodiscover()
 
 urlpatterns = [
     # Apps:
+    # Helpdesk:
+    path('helpdesk/', include(helpdesk_urls)),
 
     # Health checks:
     path('health/', include(health_urls)),  # noqa: DJ05
