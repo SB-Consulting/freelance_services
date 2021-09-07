@@ -21,7 +21,7 @@ from django.core.management.base import BaseCommand, CommandError
 from django.db.utils import IntegrityError
 from django.utils.translation import ugettext_lazy as _
 
-from helpdesk.models import Queue
+from server.apps.helpdesk.models import Queue
 
 
 class Command(BaseCommand):

@@ -30,9 +30,9 @@ from django.utils import encoding, timezone
 from django.utils.translation import ugettext as _
 from email_reply_parser import EmailReplyParser
 
-from helpdesk import settings
-from helpdesk.lib import safe_template_context, process_attachments
-from helpdesk.models import Queue, Ticket, TicketCC, FollowUp, IgnoreEmail
+from server.apps.helpdesk import settings
+from server.apps.helpdesk.lib import safe_template_context, process_attachments
+from server.apps.helpdesk.models import Queue, Ticket, TicketCC, FollowUp, IgnoreEmail
 
 
 # import User model, which may be a custom model
@@ -323,7 +323,7 @@ def create_ticket_cc(ticket, cc_list):
         return []
 
     # Local import to deal with non-defined / circular reference problem
-    from helpdesk.views.staff import User, subscribe_to_ticket_updates
+    from server.apps.helpdesk.views.staff import User, subscribe_to_ticket_updates
 
     new_ticket_ccs = []
     for cced_name, cced_email in cc_list:

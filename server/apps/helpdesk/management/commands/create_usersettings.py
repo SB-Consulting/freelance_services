@@ -12,7 +12,7 @@ from django.utils.translation import ugettext as _
 from django.core.management.base import BaseCommand
 from django.contrib.auth import get_user_model
 
-from helpdesk.models import UserSettings
+from server.apps.helpdesk.models import UserSettings
 
 User = get_user_model()
 

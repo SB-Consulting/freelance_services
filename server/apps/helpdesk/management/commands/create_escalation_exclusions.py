@@ -10,7 +10,7 @@ scripts/create_escalation_exclusion.py - Easy way to routinely add particular
 """
 from django.core.management.base import BaseCommand, CommandError
 
-from helpdesk.models import EscalationExclusion, Queue
+from server.apps.helpdesk.models import EscalationExclusion, Queue
 
 from datetime import timedelta, date
 import getopt

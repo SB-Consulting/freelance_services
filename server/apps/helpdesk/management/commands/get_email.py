@@ -12,7 +12,7 @@ scripts/get_email.py - Designed to be run from cron, this script checks the
 """
 from django.core.management.base import BaseCommand
 
-from helpdesk.email import process_email
+from server.apps.helpdesk.email import process_email
 
 
 class Command(BaseCommand):

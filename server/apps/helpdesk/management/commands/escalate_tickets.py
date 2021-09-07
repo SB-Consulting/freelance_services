@@ -18,8 +18,8 @@ from django.db.models import Q
 from django.utils.translation import ugettext as _
 from django.utils import timezone
 
-from helpdesk.models import Queue, Ticket, FollowUp, EscalationExclusion, TicketChange
-from helpdesk.lib import safe_template_context
+from server.apps.helpdesk.models import Queue, Ticket, FollowUp, EscalationExclusion, TicketChange
+from server.apps.helpdesk.lib import safe_template_context
 
 
 class Command(BaseCommand):

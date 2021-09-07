@@ -49,8 +49,8 @@ def send_templated_mail(template_name,
     from django.template import engines
     from_string = engines['django'].from_string
 
-    from helpdesk.models import EmailTemplate
-    from helpdesk.settings import HELPDESK_EMAIL_SUBJECT_TEMPLATE, \
+    from server.apps.helpdesk.models import EmailTemplate
+    from server.apps.helpdesk.settings import HELPDESK_EMAIL_SUBJECT_TEMPLATE, \
         HELPDESK_EMAIL_FALLBACK_LOCALE
 
     headers = extra_headers or {}
