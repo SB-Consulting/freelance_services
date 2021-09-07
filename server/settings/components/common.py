@@ -23,7 +23,16 @@ SECRET_KEY = config('DJANGO_SECRET_KEY')
 
 INSTALLED_APPS: Tuple[str, ...] = (
     # Your apps go here:
+    'server.apps.helpdesk',  # This is us!
+    # Helpdesk:
+    'markdown_deux',  # Required for Knowledgebase item formatting
+    'bootstrapform',  # Required for nicer formatting of forms with the default templates
+    'bootstrap4form',
 
+    # Pinax-team:
+    'pinax.teams',
+    "account",
+    "pinax.invitations",
 
     # Default django apps:
     'django.contrib.auth',
@@ -31,6 +40,8 @@ INSTALLED_APPS: Tuple[str, ...] = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',  # Required for determining domain url for use in emails
+    'django.contrib.humanize',  # Required for elapsed time formatting
 
     # django-admin:
     'django.contrib.admin',
@@ -75,7 +86,6 @@ ROOT_URLCONF = 'server.urls'
 
 WSGI_APPLICATION = 'server.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
@@ -93,7 +103,6 @@ DATABASES = {
         },
     },
 }
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
@@ -115,7 +124,6 @@ LOCALE_PATHS = (
 USE_TZ = True
 TIME_ZONE = 'UTC'
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
@@ -125,7 +133,6 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
-
 
 # Templates
 # https://docs.djangoproject.com/en/2.2/ref/templates/api
@@ -150,7 +157,6 @@ TEMPLATES = [{
     },
 }]
 
-
 # Media files
 # Media root dir is commonly changed in production
 # (see development.py and production.py).
@@ -158,7 +164,6 @@ TEMPLATES = [{
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR.joinpath('media')
-
 
 # Django authentication system
 # https://docs.djangoproject.com/en/2.2/topics/auth/
@@ -175,7 +180,6 @@ PASSWORD_HASHERS = [
     'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
     'django.contrib.auth.hashers.Argon2PasswordHasher',
 ]
-
 
 # Security
 # https://docs.djangoproject.com/en/2.2/topics/security/
@@ -194,8 +198,11 @@ REFERRER_POLICY = 'same-origin'
 # https://github.com/adamchainz/django-permissions-policy#setting
 PERMISSIONS_POLICY: Dict[str, Union[str, List[str]]] = {}  # noqa: WPS234
 
-
 # Timeouts
 # https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-EMAIL_TIMEOUT
 
 EMAIL_TIMEOUT = 5
+
+# Helpdesk
+SITE_ID = 1
+LOGIN_URL = '/helpdesk/login/'
