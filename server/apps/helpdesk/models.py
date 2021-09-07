@@ -1468,7 +1468,7 @@ class SavedSearch(models.Model):
 
 
 def get_default_setting(setting):
-    from helpdesk.settings import DEFAULT_USER_SETTINGS
+    from server.apps.helpdesk.settings import DEFAULT_USER_SETTINGS
     return DEFAULT_USER_SETTINGS[setting]
 
 
