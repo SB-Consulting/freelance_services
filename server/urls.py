@@ -39,7 +39,7 @@ urlpatterns = [
     )),
 
     # It is a good practice to have explicit index view:
-    
+
 ]
 
 if settings.DEBUG:  # pragma: no cover
