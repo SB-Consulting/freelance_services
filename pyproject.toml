@@ -33,6 +33,27 @@ python-decouple = "^3.4"
 bcrypt = "^3.2"
 structlog = "^21.1"
 
+# Helpdesk:
+django-bootstrap4-form = "^4.0.1"
+celery = "^5.1.2"
+django-celery-beat = "^2.2.1"
+email-reply-parser = "^0.5.12"
+akismet = "^1.1"
+Markdown = "^3.3.4"
+beautifulsoup4 = "^4.9.3"
+lxml = "^4.6.3"
+simplejson = "^3.17.5"
+pytz = "^2021.1"
+six = "^1.16.0"
+pinax-teams = "^2.0.0"
+djangorestframework = "^3.12.4"
+django-model-utils = "^4.1.1"
+sqlparse = "^0.4.1"
+markdown2 = "^2.4.1"
+soupsieve = "^2.2.1"
+django-bootstrap-form = "^3.4"
+django-markdown-deux = "^1.0.5"
+
 
 [tool.poetry.dev-dependencies]
 django-debug-toolbar = "^3.2"
