@@ -17,7 +17,7 @@ from server.apps.helpdesk import settings as helpdesk_settings
 from server.apps.helpdesk.views import feeds, staff, public, kb, login
 try:
     # TODO: why is it imported? due to some side-effect or by mistake?
-    import helpdesk.tasks  # NOQA
+    import server.apps.helpdesk.tasks  # NOQA
 except ImportError:
     pass
 

@@ -83,7 +83,7 @@ HELPDESK_SUBMIT_A_TICKET_PUBLIC = getattr(settings, 'HELPDESK_SUBMIT_A_TICKET_PU
 HELPDESK_PUBLIC_TICKET_FORM_CLASS = getattr(
     settings,
     "HELPDESK_PUBLIC_TICKET_FORM_CLASS",
-    "helpdesk.forms.PublicTicketForm"
+    "server.apps.helpdesk.forms.PublicTicketForm"
 )
 
 

@@ -71,7 +71,8 @@ MIDDLEWARE += (
 
 def _custom_show_toolbar(request):
     """Only show the debug toolbar to users with the superuser flag."""
-    return DEBUG and request.user.is_superuser
+    # return DEBUG and request.user.is_superuser
+    return DEBUG and True
 
 
 DEBUG_TOOLBAR_CONFIG = {
