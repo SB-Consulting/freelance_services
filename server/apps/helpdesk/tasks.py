@@ -1,4 +1,4 @@
-from celery.decorators import task
+from celery import task
 
 from .email import process_email
 
