@@ -23,7 +23,7 @@ admin.autodiscover()
 urlpatterns = [
     # Apps:
     # Helpdesk:
-    path('helpdesk/', include(helpdesk_urls)),
+    path('helpdesk/', include(helpdesk_urls, namespace='helpdesk')),
 
     # Health checks:
     path('health/', include(health_urls)),  # noqa: DJ05
